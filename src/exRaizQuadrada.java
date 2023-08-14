@@ -2,26 +2,39 @@ import java.util.Scanner;
 
 public class exRaizQuadrada {
     //    exRaizQuadrada
-//     programa le 2 numeros e diga a sua raiz quadrada, a sua potencia e seus valores absolutos
+//     programa função quadratica
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("valor x: ");
-        double x = input.nextDouble();
+        System.out.print("\tvalor a: ");
+        double a = input.nextDouble();
         input.nextLine();
 
-        System.out.print("valor y: ");
-        double y = input.nextDouble();
+        System.out.print("\tvalor b: ");
+        double b = input.nextDouble();
         input.nextLine();
 
-        double raizx = Math.sqrt(x), raizy = Math.sqrt(y);
-        System.out.printf("\n\traiz x: %f\n\traiz y: %f", raizx, raizy);
+        System.out.print("\tvalor c: ");
+        double c = input.nextDouble();
+        input.nextLine();
 
-        double powx = Math.pow(x, 2), powy = Math.pow(y, 2);
-        System.out.printf("\n\tx^2: %f\n\ty^2: %f", powx, powy);
+        double delta = Math.pow(b, 2) - 4 * a * c;
+        double rdelta = Math.sqrt(delta);
 
-        double absx = Math.abs(x), absy = Math.abs(y);
-        System.out.printf("\n\tvalor absoluto de x: %f\n\tvalor absoluto de y: %f", absx, absy);
+        double x1 = (-b - rdelta)/2;
+        double x2 = (-b + rdelta)/2;
+
+        System.out.printf("\tdelta: %f\n\tx1: %f\n\tx2: %f", delta, x1, x2);
+
+
+//        double raizx = Math.sqrt(x), raizy = Math.sqrt(y);
+//        System.out.printf("\n\traiz x: %f\n\traiz y: %f", raizx, raizy);
+//
+//        double powx = Math.pow(x, 2), powy = Math.pow(y, 2);
+//        System.out.printf("\n\tx^2: %f\n\ty^2: %f", powx, powy);
+//
+//        double absx = Math.abs(x), absy = Math.abs(y);
+//        System.out.printf("\n\tvalor absoluto de x: %f\n\tvalor absoluto de y: %f", absx, absy);
 
         input.close();
     }
