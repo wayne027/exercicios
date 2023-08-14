@@ -19,12 +19,16 @@ public class exRaizQuadrada {
         input.nextLine();
 
         double delta = Math.pow(b, 2) - 4 * a * c;
-        double rdelta = Math.sqrt(delta);
+        if (delta < 0) {
+            System.out.println("\tdelta negativo");
+        } else {
+            double rdelta = Math.sqrt(delta);
 
-        double x1 = (-b - rdelta)/2;
-        double x2 = (-b + rdelta)/2;
+            double x1 = (-b - rdelta) / 2;
+            double x2 = (-b + rdelta) / 2;
 
-        System.out.printf("\tdelta: %f\n\tx1: %f\n\tx2: %f", delta, x1, x2);
+            System.out.printf("\tdelta: %f\n\tx1: %f\n\tx2: %f", delta, x1, x2);
+        }
 
 
 //        double raizx = Math.sqrt(x), raizy = Math.sqrt(y);
