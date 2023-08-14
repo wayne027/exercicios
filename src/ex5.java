@@ -51,4 +51,7 @@ class Peca {
         codigo = codigop;
         val_peca = val_pecap;
     }
+    public int a() {
+        return codigo;
+    }
 }
