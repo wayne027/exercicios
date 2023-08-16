@@ -61,6 +61,17 @@ public class lista2 {
 //e terminar em outro, tendo uma duração mínima de 1 hora e má-
 //xima de 24 horas
     static void ex4(Scanner input){
+        System.out.print("digite a hora inicial ");
+        int num = input.nextInt();
+
+        System.out.print("digite a hora final ");
+        int num2 = input.nextInt();
+
+        if (num >= 1 && num2 <= 24) {
+            System.out.printf("o jogo durou %s horas \n", num2 - num);
+        } else {
+            System.out.println("voce digitou a/as horas erradas");
+        }
 
     }
 //    Com base na tabela abaixo, escreva um programa que leia o có-
