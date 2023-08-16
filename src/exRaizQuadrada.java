@@ -30,16 +30,6 @@ public class exRaizQuadrada {
             System.out.printf("\tdelta: %f\n\tx1: %f\n\tx2: %f", delta, x1, x2);
         }
 
-
-//        double raizx = Math.sqrt(x), raizy = Math.sqrt(y);
-//        System.out.printf("\n\traiz x: %f\n\traiz y: %f", raizx, raizy);
-//
-//        double powx = Math.pow(x, 2), powy = Math.pow(y, 2);
-//        System.out.printf("\n\tx^2: %f\n\ty^2: %f", powx, powy);
-//
-//        double absx = Math.abs(x), absy = Math.abs(y);
-//        System.out.printf("\n\tvalor absoluto de x: %f\n\tvalor absoluto de y: %f", absx, absy);
-
         input.close();
     }
 }
