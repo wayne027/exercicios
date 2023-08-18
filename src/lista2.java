@@ -3,14 +3,23 @@ import java.util.Scanner;
 public class lista2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-//        ex1(input);
-//        ex2(input);
-//        ex3(input);
+        System.out.println("\t\texecicio 1\n");
+        ex1(input);
+        System.out.println("\t\texecicio 2\n");
+        ex2(input);
+        System.out.println("\t\texecicio 3\n");
+        ex3(input);
+        System.out.println("\t\texecicio 4\n");
         ex4(input);
+        System.out.println("\t\texecicio 5\n");
         ex5(input);
+        System.out.println("\t\texecicio 6\n");
         ex6(input);
+        System.out.println("\t\texecicio 7\n");
         ex7(input);
+        System.out.println("\t\texecicio 8\n");
         ex8(input);
+        System.out.println("\t\tfim dos exercicios");
         input.close();
 
     }
@@ -84,34 +93,93 @@ public class lista2 {
 //    4               Xsalada       2
 //    5               Refri       1,5
     static void ex5(Scanner input){
+        System.out.print("\t1\tPizza" +
+                "\n\t2\tXburger" +
+                "\n\t3\tXbacon" +
+                "\n\t4\tXsalada" +
+                "\n\t5\tRefri\ndigite o codigo do pedido: ");
+        int cod = input.nextInt();
 
+        System.out.print("digite a quantidade: ");
+        int quant = input.nextInt();
+
+        switch (cod) {
+            case 1 -> System.out.printf("voce pediu %s de Pizza isso vai custar %s\n", quant, quant * 4);
+            case 2 -> System.out.printf("voce pediu %s de Xburger isso vai custar  %.2f\n", quant, quant * 4.5);
+            case 3 -> System.out.printf("voce pediu %s de Xbacon isso vai custar  %s\n", quant, quant * 5);
+            case 4 -> System.out.printf("voce pediu %s de Xsalada isso vai custar  %s\n", quant, quant * 2);
+            case 5 -> System.out.printf("voce pediu %s de Refri isso vai custar  %.2f\n", quant, quant * 1.5);
+            default -> System.out.println("digite um codigo valido");
+        }
     }
 //    Faça um programa que leia um valor qualquer e apresente uma
 //mensagem dizendo em qual dos seguintes intervalos ([0,25],
 //(25,50], (50,75], (75,100]) este valor se encontra.Se o valor não
 //estiver em nenhum destes intervalos, deverá ser impressa a men-
 //sagem "Fora de intervalo"
-    static void ex6(Scanner input){
+    static void ex6(Scanner input) {
+        System.out.print("digite um valor: ");
+        int num = input.nextInt();
 
+        if (num >= 0 && num <= 25) {
+            System.out.println("entre 0 e 25");
+        } else if (num >= 25 && num <= 50) {
+            System.out.println("entre 25 e 50");
+        } else if (num >= 50 && num <= 75) {
+            System.out.println("entre 50 e 75");
+        } else if (num >= 75 && num <= 100) {
+            System.out.println("entre 75 e 100");
+        } else {
+            System.out.println("não esta em nenhum intervalo");
+        }
     }
 //    Leia 2 valores com uma casa decimal (x e y), que devem repre-
-//sentar as coordenadas de um ponto em um plano. A seguir, deter-
-//mine qual o quadrante ao qual pertence o ponto, ou se se está sobre
+//sentar as coordenadas de um ponto em um plano. A seguir, determine
+// qual o quadrante ao qual pertence o ponto, ou se se está sobre
 //um dos eïxos cartesianos ou na origem (x= y=0).
     static void ex7(Scanner input){
+        System.out.print("digite o valor X: ");
+        float x = input.nextFloat();
 
+        System.out.print("digite o valor Y: ");
+        float y = input.nextFloat();
+
+        if (x == 0 || y == 0) {
+            System.out.print("esta no eixo");
+        } else if (x > 0 && y > 0) {
+            System.out.println("1 quadrante");
+        } else if (x < 0 && y > 0) {
+            System.out.println("2 quadrante");
+        } else if (x < 0 && y < 0) {
+            System.out.println("3 quadrante");
+        } else if (x > 0 && y < 0) {
+            System.out.println("4 quadrante");
+        }
     }
 //    8- Faça um programa que leia um valor com duas casas de-
 //cimais, equivalente ao salário de uma pessoa. Em seguida
-//calcule e mostre o valor que esta þessoa deve pagar de Im-
-//O
-//posto de Renda, segundo a tabela abaixo
+//calcule e mostre o valor que esta þessoa deve pagar de Imposto de Renda,
+// segundo a tabela abaixo
 //    Base calculo                      Aliquota
-//    de R$ 1903,99 até R$ 2826,65
-//    de R$ 2826,66,99 até R$ 3751,05
-//    de R$ 3751,06 até R$ 4664,68
-//    acima de R$ 4664,68
+//    de R$ 1903,99 até R$ 2826,65          7,5%
+//    de R$ 2826,65 até R$ 3751,05          15,0%
+//    de R$ 3751,06 até R$ 4664,68          22,5%
+//    acima de R$ 4664,68                   27,5%
     static void ex8(Scanner input){
+        System.out.print("Qual o salario: ");
+        double salario = input.nextDouble();
+
+        if (salario >= 1903.99 && salario < 2826.65) {
+            System.out.println("voce deve pagar 7,5% de aliquota");
+        } else if (salario >= 2826.65 && salario <= 3751.05) {
+            System.out.println("voce deve pagar 15,0% de aliquota");
+        } else if (salario >= 3751.05 && salario <= 4664.68) {
+            System.out.println("voce deve pagar 22,5% de aliquota");
+        } else if (salario > 4664.68) {
+            System.out.println("voce deve pagar 27,5% de aliquota");
+        } else {
+            System.out.println("salario baixo");
+        }
 
     }
 
