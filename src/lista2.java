@@ -3,23 +3,26 @@ import java.util.Scanner;
 public class lista2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("\t\texecicio 1\n");
-        ex1(input);
-        System.out.println("\t\texecicio 2\n");
-        ex2(input);
-        System.out.println("\t\texecicio 3\n");
-        ex3(input);
-        System.out.println("\t\texecicio 4\n");
-        ex4(input);
-        System.out.println("\t\texecicio 5\n");
-        ex5(input);
-        System.out.println("\t\texecicio 6\n");
-        ex6(input);
-        System.out.println("\t\texecicio 7\n");
-        ex7(input);
-        System.out.println("\t\texecicio 8\n");
-        ex8(input);
-        System.out.println("\t\tfim dos exercicios");
+
+        boolean sair = true;
+
+        while (sair) {
+            System.out.print("\t qual execicio voce quer ver[1-8] 0 para sair: ");
+            int escolha = input.nextInt();
+
+            switch (escolha) {
+                case 1 -> ex1(input);
+                case 2 -> ex2(input);
+                case 3 -> ex3(input);
+                case 4 -> ex4(input);
+                case 5 -> ex5(input);
+                case 6 -> ex6(input);
+                case 7 -> ex7(input);
+                case 8 -> ex8(input);
+                case 0 -> sair = false;
+            }
+        }
+
         input.close();
 
     }
@@ -69,7 +72,7 @@ public class lista2 {
 //duração do Jogo, sabendo que O mesmo pode começar em um dia
 //e terminar em outro, tendo uma duração mínima de 1 hora e má-
 //xima de 24 horas
-    static void ex4(Scanner input){
+    static void ex4(Scanner input) {
         System.out.print("digite a hora inicial ");
         int num = input.nextInt();
 
