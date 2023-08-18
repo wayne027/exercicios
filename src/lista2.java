@@ -170,13 +170,13 @@ public class lista2 {
         double salario = input.nextDouble();
 
         if (salario >= 1903.99 && salario < 2826.65) {
-            System.out.println("voce deve pagar 7,5% de aliquota");
+            System.out.println("voce deve pagar 7,5% de aliquota, que é igual a " + salario * 0.075);
         } else if (salario >= 2826.65 && salario <= 3751.05) {
-            System.out.println("voce deve pagar 15,0% de aliquota");
+            System.out.println("voce deve pagar 15,0% de aliquota, que é igual a " + salario * 0.15);
         } else if (salario >= 3751.05 && salario <= 4664.68) {
-            System.out.println("voce deve pagar 22,5% de aliquota");
+            System.out.println("voce deve pagar 22,5% de aliquota, que é igual a " + salario * 0.225);
         } else if (salario > 4664.68) {
-            System.out.println("voce deve pagar 27,5% de aliquota");
+            System.out.println("voce deve pagar 27,5% de aliquota, que é igual a " + salario * 0.275);
         } else {
             System.out.println("salario baixo");
         }
