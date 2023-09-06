@@ -134,5 +134,5 @@ static void ex7(Scanner input){
     for (int i = 1; i <= n; i++) {
         System.out.printf("%s, quadrado: %s, cubo: %s\n", i, Math.pow(i, 2), Math.pow(i, 3));
     }
-}
+    }
 }
