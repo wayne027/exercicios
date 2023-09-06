@@ -22,10 +22,7 @@ public class lista3 {
         input.close();
 
     }
-//  1 - Faça um programa que repita a leitura de uma senha até que ela seja válida.
-//  Para cada leitura de senha incorreta informada, escrever a mensagem "Senha Invalida".
-//  Quando a senha for informada corretamente deve ser impressa a mensagem "Acesso Permitido" e o algoritmo encerrado. 
-// Considere que a senha correta é o valor 2002.
+//  1
     static void ex1(Scanner input){
         int senha = 0;
         while(senha != 2002){
@@ -35,9 +32,7 @@ public class lista3 {
         }
         System.out.print("\nsenha correta");
     }
-// 2-  Faça um programa para ler as coordenadas (X,Y) de uma quantidade indeterminada de pontos no sistema cartesiano. 
-// Para cada ponto escrever o quadrante a que ele pertence. 
-// O algoritmo será encerrado quando pelo menos uma de duas coordenadas for NULA (nesta situação sem escrever mensagem alguma).
+// 2
     static void ex2(Scanner input){
         while(true){
             System.out.print("digite o valor X: ");
@@ -60,9 +55,7 @@ public class lista3 {
             }
         }
     }
-// 3-  Um Posto de combustíveis deseja determinar qual de seus produtos tem a preferência de seus clientes. 
-// Escreva um algoritmo para ler o tipo de combustível abastecido (codificado da seguinte forma:
-//  1.Álcool 2.Gasolina 3.Diesel 4.Fim). 
+// 3-
 // Caso o usuário informe um código inválido (fora da faixa de 1 a 4)
 //  deve ser solicitado um novo código (até que seja válido). 
 // O programa será encerrado quando o código informado for o número 4.
@@ -71,14 +64,25 @@ public class lista3 {
             int alcool = 0;
             int gasolina = 0;
             int diesel = 0; 
-            int cod = 0;
-            while(cod != 4) {
-                System.out.print("combustivel abastecido: \n\t1.Alcool \n\t2.Gasolina \n\t3.Diesel \n\t4.Fim \n\t digite: ");
+            int cod;
+            while(true) {
+                System.out.print("Combustivel abastecido: \n\t1.Alcool \n\t2.Gasolina \n\t3.Diesel \n\t4.Finalizar \n\t Digite: ");
                 cod = input.nextInt();
-                switch(cod) {
-                    case 1 -> alcool ++;
-                    case 2 -> gasolina++;
-                    case 3 -> diesel++;
+                if(cod ==1)
+                {
+                    System.out.println(alcool);
+                }
+                    else if(cod ==2 )
+                {
+                    System.out.print(gasolina);
+                }
+                    else if (cod == 3)
+                {
+                    System.out.print(diesel);
+                }
+                    else if (cod == 4) {
+                        System.out.print("Foi de base");
+                        break;
                 }
             }
             System.out.printf("\n\tAlcool: %s  \n\tGasolina: %s \n\tDiesel: %s", alcool, gasolina, diesel);

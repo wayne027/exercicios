@@ -26,8 +26,7 @@ public class lista2 {
         input.close();
 
     }
-//    1- Faça um programa para ler um número inteiro, e e depois dizer
-//se este número é negativo ou não.
+//    1
     static void ex1(Scanner input){
         System.out.print("digite um numero ");
         int num = input.nextInt();
@@ -37,8 +36,7 @@ public class lista2 {
             System.out.println("negativo");
         }
     }
-//    Faça um programa para ler um número inteiro e dizer se este
-//número é par ou impar.
+//    2
     static void ex2(Scanner input){
         System.out.print("digite um numero ");
         int num = input.nextInt();
@@ -48,11 +46,7 @@ public class lista2 {
             System.out.println("impar");
         }
     }
-//    Leia 2 valores inteiros (A e B). Após, o programa deve mostrar O
-//uma mensagem "Sao Multiplos" ou "Nao sao Multiplos", indi-
-//cando se os valores lidos são múltiplos entre si. Atenção: os núme-
-//ros devem poder ser digitados em ordem crescente ou decres-
-//cente.
+//   3
     static void ex3(Scanner input){
         System.out.print("digite um numero ");
         int num = input.nextInt();
@@ -68,10 +62,7 @@ public class lista2 {
             System.out.println("Nao sao Multiplos");
         }
     }
-//    Leia hora inicial e a hora final de um jogo. A seguir calcule a
-//duração do Jogo, sabendo que O mesmo pode começar em um dia
-//e terminar em outro, tendo uma duração mínima de 1 hora e má-
-//xima de 24 horas
+//    4
     static void ex4(Scanner input) {
         System.out.print("digite a hora inicial ");
         int num = input.nextInt();
@@ -86,9 +77,7 @@ public class lista2 {
         }
 
     }
-//    Com base na tabela abaixo, escreva um programa que leia o có-
-//digo de um item e a quantidade deste item. A seguir, calcule e
-//mostre o valor da conta a pagar:
+//    5
 //    Código          Descrição  Preço
 //    1               Pizza       4
 //    2               Xburger      4,5
@@ -96,30 +85,31 @@ public class lista2 {
 //    4               Xsalada       2
 //    5               Refri       1,5
     static void ex5(Scanner input){
-        System.out.print("\t1\tPizza" +
-                "\n\t2\tXburger" +
-                "\n\t3\tXbacon" +
-                "\n\t4\tXsalada" +
-                "\n\t5\tRefri\ndigite o codigo do pedido: ");
+        System.out.print("""
+                \t1\tPizza
+                \t2\tXburger
+                \t3\tXbacon
+                \t4\tXsalada
+                \t5\tRefri
+                digite o codigo do pedido:\s""");
         int cod = input.nextInt();
 
         System.out.print("digite a quantidade: ");
-        int quant = input.nextInt();
-
-        switch (cod) {
-            case 1 -> System.out.printf("voce pediu %s de Pizza isso vai custar %s\n", quant, quant * 4);
-            case 2 -> System.out.printf("voce pediu %s de Xburger isso vai custar  %.2f\n", quant, quant * 4.5);
-            case 3 -> System.out.printf("voce pediu %s de Xbacon isso vai custar  %s\n", quant, quant * 5);
-            case 4 -> System.out.printf("voce pediu %s de Xsalada isso vai custar  %s\n", quant, quant * 2);
-            case 5 -> System.out.printf("voce pediu %s de Refri isso vai custar  %.2f\n", quant, quant * 1.5);
-            default -> System.out.println("digite um codigo valido");
+        float quant = input.nextInt();
+        if(cod==1){System.out.printf("seu pedido foi %s  Pizza, custou%s\n",quant,quant * 4);
+        } else if (cod ==2) {
+            System.out.printf("seu pedido foi %s  Xburger, custou %s\n",quant,quant * 4.5);
+        } else if (cod ==3) {
+            System.out.printf("seu pedido foi %s  Xbacon, custou %s\n",quant,quant * 5);
+        } else if (cod ==4) {
+            System.out.printf("seu pedido foi %s  Xsalada, custou %s\n", quant, quant * 2);
+        } else if (cod ==5) {
+            System.out.printf("seu pedido foi %s Refri, custou %s\n ", quant, quant * 1.5);
+        } else {
+            System.out.println("não pediu nada");
         }
-    }
-//    Faça um programa que leia um valor qualquer e apresente uma
-//mensagem dizendo em qual dos seguintes intervalos ([0,25],
-//(25,50], (50,75], (75,100]) este valor se encontra.Se o valor não
-//estiver em nenhum destes intervalos, deverá ser impressa a men-
-//sagem "Fora de intervalo"
+        }
+//    6
     static void ex6(Scanner input) {
         System.out.print("digite um valor: ");
         int num = input.nextInt();
@@ -136,10 +126,7 @@ public class lista2 {
             System.out.println("não esta em nenhum intervalo");
         }
     }
-//    Leia 2 valores com uma casa decimal (x e y), que devem repre-
-//sentar as coordenadas de um ponto em um plano. A seguir, determine
-// qual o quadrante ao qual pertence o ponto, ou se se está sobre
-//um dos eïxos cartesianos ou na origem (x= y=0).
+//    7
     static void ex7(Scanner input){
         System.out.print("digite o valor X: ");
         float x = input.nextFloat();
@@ -159,10 +146,7 @@ public class lista2 {
             System.out.println("4 quadrante");
         }
     }
-//    8- Faça um programa que leia um valor com duas casas de-
-//cimais, equivalente ao salário de uma pessoa. Em seguida
-//calcule e mostre o valor que esta þessoa deve pagar de Imposto de Renda,
-// segundo a tabela abaixo
+//    8
 //    Base calculo                      Aliquota
 //    de R$ 1903,99 até R$ 2826,65          7,5%
 //    de R$ 2826,65 até R$ 3751,05          15,0%
@@ -173,13 +157,13 @@ public class lista2 {
         double salario = input.nextDouble();
 
         if (salario >= 1903.99 && salario < 2826.65) {
-            System.out.println("voce deve pagar 7,5% de aliquota, que é igual a " + salario * 0.075);
+            System.out.println("pague 7,5% de aliquota, que é igual a " + salario * 0.075);
         } else if (salario >= 2826.65 && salario <= 3751.05) {
-            System.out.println("voce deve pagar 15,0% de aliquota, que é igual a " + salario * 0.15);
+            System.out.println("pague 15,0% de aliquota, que é igual a " + salario * 0.15);
         } else if (salario >= 3751.05 && salario <= 4664.68) {
-            System.out.println("voce deve pagar 22,5% de aliquota, que é igual a " + salario * 0.225);
+            System.out.println("pague 22,5% de aliquota, que é igual a " + salario * 0.225);
         } else if (salario > 4664.68) {
-            System.out.println("voce deve pagar 27,5% de aliquota, que é igual a " + salario * 0.275);
+            System.out.println("pague 27,5% de aliquota, que é igual a " + salario * 0.275);
         } else {
             System.out.println("salario baixo");
         }

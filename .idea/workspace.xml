@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="98ea1663-4b0b-4705-8580-c4c07891610f" name="Changes" comment="exercicio 4">
+    <list default="true" id="98ea1663-4b0b-4705-8580-c4c07891610f" name="Changes" comment="Atualizações">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ex4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ex4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lista2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lista2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lista3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lista3.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,9 +38,33 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/Pet0151047/Desktop/Exercícios senai",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
 }]]></component>
+  <component name="RunManager" selected="Application.lista3">
+    <configuration name="lista2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lista2" />
+      <module name="untitled" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="lista3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lista3" />
+      <module name="untitled" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.lista3" />
+        <item itemvalue="Application.lista2" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -69,6 +97,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="exercicio 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="exercicio 4" />
+    <MESSAGE value="Atualizações" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atualizações" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
